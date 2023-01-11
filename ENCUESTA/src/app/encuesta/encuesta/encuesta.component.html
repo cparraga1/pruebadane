@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+</head>
+
+<body>
+    <div class="User-content">
+        <div class="validate-container ">
+
+            <div class="container">
+                <form [formGroup]="formulario" (submit)="onCreate()">
+
+                    <div style="margin-top: 15PX;" class="text-center">
+                        <h3 class="text-danger">ENCUESTA</h3>
+                    </div>
+
+                    <div style="width: 100%; margin-top: 15px;" id="DataFormulario">
+                        <div class="form-group row align-middle tablaSuperior question-container">
+                            <div class="col-sm-6">
+                                <p class="text-muted">1. ¿Cuál es su país de residencia permanente?</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <input formControlName="pais" type="text" name="pais" name="pais"
+                                    class="form-control mb-3" id="pais" value="" />
+                            </div>
+
+                            <div class="col-sm-6">
+                                <p class="text-muted">2. ¿Cuál es su nacionalidad?</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <input formControlName="nacionalidad" type="text" name="nacionalidad"
+                                    name="nacionalidad" class="form-control mb-3" id="nacionalidad" value="" />
+                            </div>
+
+                            <div class="col-sm-2">
+                                <p class="text-muted">3. Sexo</p>
+                            </div>
+                            <div class="col-sm-5">
+                                <input formControlName="sexo" type="radio" class="form-check-input" id="sexo1"
+                                    name="sexo" value="M">
+                                <label class="form-check-label" for="sexo1">Masculino </label> <br>
+                                <input formControlName="sexo" type="radio" class="form-check-input" id="sexo2"
+                                    name="sexo" value="F">
+                                <label class="form-check-label" for="sexo2">Femenino </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="text-muted">Edad</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <input formControlName="edad" type="number" name="edad" name="edad"
+                                    class="form-control mb-3" id="edad" value="" />
+                            </div>
+
+                            <div class="col-sm-3">
+                                <p class="text-muted">4. ¿Con quien viaja?</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <input formControlName="viaja" type="radio" class="form-check-input" id="viaja1"
+                                    name="viaja" value="1">
+                                <label class="form-check-label" for="viaja1">Solo </label><br>
+
+                                <input formControlName="viaja" type="radio" class="form-check-input" id="viaja2"
+                                    name="viaja" value="2">
+                                <label class="form-check-label" for="viaja2">Familia </label><br>
+
+                                <input formControlName="viaja" type="radio" class="form-check-input" id="viaja3"
+                                    name="viaja" value="3">
+                                <label class="form-check-label" for="viaja3">Compañeros de trabajo y/o estudio
+                                </label><br>
+
+                                <input formControlName="viaja" type="radio" class="form-check-input" id="viaja4"
+                                    name="viaja" value="4">
+                                <label class="form-check-label" for="viaja4">Amigos </label><br>
+
+                                <input formControlName="viaja" type="radio" class="form-check-input" id="viaja5"
+                                    name="viaja" value="5">
+                                <label class="form-check-label" for="viaja5">Otro ¿Cuál? </label>
+                                <input formControlName="idNumDoc" type="number" name="idNumDoc" name="idNumDoc"
+                                    class="form-control mb-3" id="idNumDoc" value="" />
+                            </div>
+
+                            <div class="col-sm-6">
+                                <p class="text-muted">5. ¿Incluyéndolo a usted con cuantas personas viaja?</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <input formControlName="numviajeros" type="number" name="numviajeros" name="numviajeros"
+                                    class="form-control mb-3" id="numviajeros" value="" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row align-middle tablaSuperior question-container">
+                            <div class="col-sm-12">
+                                <p class="text-muted">6. ¿Cuál fue el principal motivo de este viaje? </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo1"
+                                    name="motivo" value="1">
+                                <label class="form-check-label" for="motivo1">Visita a familiares o amigos </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo2"
+                                    name="motivo" value="2">
+                                <label class="form-check-label" for="motivo2">Vacaciones (recreación, ocio, sol y playa)
+                                </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo3"
+                                    name="motivo" value="3">
+                                <label class="form-check-label" for="motivo3">Compras </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo4"
+                                    name="motivo" value="4">
+                                <label class="form-check-label" for="motivo4">Turismo cultural </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo5"
+                                    name="motivo" value="5">
+                                <label class="form-check-label" for="motivo5">Asistencia a eventos artísticos y/o
+                                    deportivos destino </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo6"
+                                    name="motivo" value="6">
+                                <label class="form-check-label" for="motivo6">Estudio y/o formación </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo7"
+                                    name="motivo" value="7">
+                                <label class="form-check-label" for="motivo7">Tratamiento de salud y belleza
+                                </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo8"
+                                    name="motivo" value="8">
+                                <label class="form-check-label" for="motivo8">Religioso </label><br>
+
+                            </div>
+
+                            <div class="col-sm-6">
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo9"
+                                    name="motivo" value="9">
+                                <label class="form-check-label" for="motivo9">Asistencia a Congresos, Seminarios
+                                    convenciones </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo10"
+                                    name="motivo" value="10">
+                                <label class="form-check-label" for="motivo10">Trabajo remunerado en destino
+                                </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo11"
+                                    name="motivo" value="11">
+                                <label class="form-check-label" for="motivo11">Trabajo o negocios (no remunerado en
+                                    destino) </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo12"
+                                    name="motivo" value="12">
+                                <label class="form-check-label" for="motivo12">Participación en eventos artísticos y/o
+                                    deportivos </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo13"
+                                    name="motivo" value="13">
+                                <label class="form-check-label" for="motivo13">Tránsito </label><br>
+
+                                <input formControlName="motivo" type="radio" class="form-check-input" id="motivo14"
+                                    name="motivo" value="14">
+                                <label class="form-check-label" for="motivo14">Otro ¿Cuál? </label><br>
+                                <input formControlName="detallemotivo" type="number" name="detallemotivo"
+                                    name="detallemotivo" class="form-control mb-3" id="detallemotivo" value="" />
+                            </div>
+
+
+                            <div class="col-sm-12"><br>
+                                <p class="text-muted">7. ¿Cómo organizó su viaje? </p>
+                            </div>
+                            <div class="col-sm-12">
+                                <input formControlName="tipoviaje" type="radio" class="form-check-input" id="tipoviaje1"
+                                    name="tipoviaje" value="1">
+                                <label class="form-check-label" for="tipoviaje1">Paquete turístico organizado por una
+                                    agencia de viajes en Colombia </label><br>
+
+                                <input formControlName="tipoviaje" type="radio" class="form-check-input" id="tipoviaje2"
+                                    name="tipoviaje" value="2">
+                                <label class="form-check-label" for="tipoviaje2">Paquete turístico organizado por una
+                                    agencia de viajes en el país de visita </label><br>
+
+                                <input formControlName="tipoviaje" type="radio" class="form-check-input" id="tipoviaje3"
+                                    name="tipoviaje" value="3">
+                                <label class="form-check-label" for="tipoviaje3">Paquete turístico organizado por
+                                    terceros que no sean agencias de viajes </label><br>
+
+                                <input formControlName="tipoviaje" type="radio" class="form-check-input" id="tipoviaje4"
+                                    name="tipoviaje" value="4">
+                                <label class="form-check-label" for="tipoviaje4">Viaje organizado por cuenta propia
+                                </label><br>
+
+                                <input formControlName="tipoviaje" type="radio" class="form-check-input" id="tipoviaje5"
+                                    name="tipoviaje" value="14">
+                                <label class="form-check-label" for="tipoviaje5">Otro ¿Cuál? </label><br>
+                                <input formControlName="tipoviajedetalle" type="number" name="tipoviajedetalle"
+                                    name="tipoviajedetalle" class="form-control mb-3" id="tipoviajedetalle" value="" />
+
+                                <div class="col-sm-12">
+                                    <p class="text-muted">8. ¿Qué tipo de servicios comprendió el paquete turístico
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input formControlName="servicio" type="checkbox" class="form-check-input"
+                                        id="servicio1" name="servicio" value="1">
+                                    <label class="form-check-label" for="servicio1">Alojamiento </label><br>
+
+                                    <input formControlName="servicio" type="checkbox" class="form-check-input"
+                                        id="servicio2" name="servicio" value="2">
+                                    <label class="form-check-label" for="servicio2">Transporte internacional
+                                    </label><br>
+
+                                    <input formControlName="servicio" type="checkbox" class="form-check-input"
+                                        id="servicio3" name="servicio" value="3">
+                                    <label class="form-check-label" for="servicio3">Alimentos y bebidas (No incluidos en
+                                        el alojamiento) </label><br>
+
+                                    <input formControlName="servicio" type="checkbox" class="form-check-input"
+                                        id="servicio4" name="servicio" value="4">
+                                    <label class="form-check-label" for="servicio4"> Servicios culturales y de
+                                        entretenimiento </label><br>
+
+                                    <input formControlName="servicio" type="checkbox" class="form-check-input"
+                                        id="servicio5" name="servicio" value="5">
+                                    <label class="form-check-label" for="servicio5">Servicios deportivos y
+                                        recreacionales
+                                    </label><br>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <input formControlName="servicio" type="checkbox" class="form-check-input"
+                                        id="servicio6" name="servicio" value="6">
+                                    <label class="form-check-label" for="servicio6">Tours en destino (con servicio de
+                                        guía)</label><br>
+
+                                    <input formControlName="servicio" type="checkbox" class="form-check-input"
+                                        id="servicio7" name="servicio" value="7">
+                                    <label class="form-check-label" for="servicio7">Transporte aéreo interno en el
+                                        destino </label><br>
+
+                                    <input formControlName="servicio" type="checkbox" class="form-check-input"
+                                        id="servicio8" name="servicio" value="8">
+                                    <label class="form-check-label" for="servicio8">Otro transporte interno ¿Cuál?
+                                    </label><br>
+                                    <input formControlName="serviciodetalle1" type="text" name="serviciodetalle1"
+                                        name="serviciodetalle1" class="form-control mb-3" id="serviciodetalle1"
+                                        value="" />
+
+                                    <input formControlName="servicio" type="checkbox" class="form-check-input"
+                                        id="servicio9" name="servicio" value="9">
+                                    <label class="form-check-label" for="servicio9">Otro servicio ¿Cuál?
+                                    </label><br>
+                                    <input formControlName="serviciodetalle2" type="text" name="serviciodetalle2"
+                                        name="serviciodetalle2" class="form-control mb-3" id="serviciodetalle2"
+                                        value="" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <button [disabled]="formulario.invalid"
+                                    class="btn btn-danger btn botonFinal">Enviar</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-warning btn botonFinal" (click)="cancelar()">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <p class="text-muted" style="font-size: 9px;">Desarrollado por Carlos Párraga - 2023</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

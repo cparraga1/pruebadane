@@ -1,0 +1,7 @@
+{
+    "/api/*":{
+        "target":"https://soporte.serviciocivil.gov.co:10002/",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
